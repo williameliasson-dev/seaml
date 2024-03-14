@@ -8,9 +8,7 @@ pub fn App() -> impl IntoView {
     provide_meta_context();
 
     view! {
-        // injects a stylesheet into the document <head>
-        // id=leptos means cargo-leptos will hot-reload this stylesheet
-        <Stylesheet id="leptos" href="/pkg/seaml.css"/>
+        <Stylesheet id="leptos" href="/pkg/tailwind.css"/>
 
         // sets the document title
         <Title text="Welcome to Leptos"/>
@@ -35,7 +33,7 @@ fn HomePage() -> impl IntoView {
     let on_click = move |_| set_count.update(|count| *count += 1);
 
     view! {
-        <h1>"Welcome to Leptos!"</h1>
+        <h2 class="text-4xl">"Welcome to Leptos with Tailwind"</h2>
         <button on:click=on_click>"Click Me: " {count}</button>
     }
 }
@@ -57,7 +55,5 @@ fn NotFound() -> impl IntoView {
         resp.set_status(actix_web::http::StatusCode::NOT_FOUND);
     }
 
-    view! {
-        <h1>"Not Found"</h1>
-    }
+    view! { <h1>"Not Found"</h1> }
 }
