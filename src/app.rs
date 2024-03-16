@@ -10,14 +10,20 @@ pub fn App() -> impl IntoView {
     provide_meta_context();
 
     view! {
-        <Stylesheet id="leptos" href="/pkg/tailwind.css"/>
-
-        // sets the document title
-        <Title text="Welcome to Leptos"/>
+        <head>
+            <Stylesheet id="leptos" href="/pkg/tailwind.css"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+                rel="stylesheet"
+            />
+            <Title text="Welcome to Leptos"/>
+        </head>
 
         // content for this welcome page
         <Router>
-            <main>
+            <main class="bg-primary absolute inset-0">
                 <Routes>
                     <Route
                         path="/"
