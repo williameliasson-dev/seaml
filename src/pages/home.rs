@@ -1,3 +1,4 @@
+use crate::components::button::*;
 use leptos::*;
 
 #[component]
@@ -8,6 +9,6 @@ pub fn Home() -> impl IntoView {
 
     view! {
         <h2 class="text-4xl">"Welcome to Leptos with Tailwind"</h2>
-        <button on:click=on_click>"Click Me: " {count}</button>
+        <Button on:click=on_click>"Click Me: " {count}</Button>
     }
 }
