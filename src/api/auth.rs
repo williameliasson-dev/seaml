@@ -22,7 +22,7 @@ pub async fn login() -> Result<(), ServerFnError>{
 
     let client_id = std::env::var("GITHUB_CLIENT_ID").expect("GITHUB_CLIENT_ID must be set");
     let secret_key = std::env::var("GITHUB_SECRET").expect("GITHUB_SECRET must be set");
-    let env = std::env::var("ENV").expect("ENV must be set");
+
 
     let client = BasicClient::new(
         ClientId::new(client_id.to_string()),
