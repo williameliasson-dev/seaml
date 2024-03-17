@@ -11,7 +11,7 @@ pub fn App() -> impl IntoView {
 
     view! {
         <head>
-            <Stylesheet id="leptos" href="/pkg/tailwind.css"/>
+            <Stylesheet id="leptos" href="/pkg/seaml.css"/>
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
             <link
